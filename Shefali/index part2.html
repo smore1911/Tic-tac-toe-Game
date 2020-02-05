@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <title>Tic Tac Toe</title>
+    </head>
+    <body>
+        <svg id="rect" height="600" width="600">
+            <line x1="200" y1="0" x2="200" y2="600" style="stroke: black; stroke-width:4;"></line>
+            <line x1="400" y1="0" x2="400" y2="600" style="stroke: black; stroke-width:4;"></line>
+            <line x1="0" y1="200" x2="600" y2="200" style="stroke: black; stroke-width:4;"></line>
+            <line x1="0" y1="400" x2="600" y2="400" style="stroke: black; stroke-width:4;"></line>
+            <rect x="25" y="25" width="150" height="150" style="fill:aqua;stroke:darkblue;stroke-width:5;fill-opacity:0.1;stroke-opacity:0.9" onclick="circle(25,25)"/>
+            <rect x="225" y="25" width="150" height="150" style="fill:aqua;stroke:darkblue;stroke-width:5;fill-opacity:0.1;stroke-opacity:0.9" onclick="circle(225,25)" />
+            <rect x="425" y="25" width="150" height="150" style="fill:aqua;stroke:darkblue;stroke-width:5;fill-opacity:0.1;stroke-opacity:0.9" onclick="circle(425,25)" />
+            <rect x="25" y="225" width="150" height="150" style="fill:aqua;stroke:darkblue;stroke-width:5;fill-opacity:0.1;stroke-opacity:0.9" onclick="circle(25,225)" />
+            <rect x="225" y="225" width="150" height="150" style="fill:aqua;stroke:darkblue;stroke-width:5;fill-opacity:0.1;stroke-opacity:0.9" onclick="circle(225,225)" />
+            <rect x="425" y="225" width="150" height="150" style="fill:aqua;stroke:darkblue;stroke-width:5;fill-opacity:0.1;stroke-opacity:0.9" onclick="circle(425,225)" />
+            <rect x="25" y="425" width="150" height="150" style="fill:aqua;stroke:darkblue;stroke-width:5;fill-opacity:0.1;stroke-opacity:0.9" onclick="circle(25,425)" />
+            <rect x="225" y="425" width="150" height="150" style="fill:aqua;stroke:darkblue;stroke-width:5;fill-opacity:0.1;stroke-opacity:0.9" onclick="circle(225,425)" />
+            <rect x="425" y="425" width="150" height="150" style="fill:aqua;stroke:darkblue;stroke-width:5;fill-opacity:0.1;stroke-opacity:0.9" onclick="circle(425,425)" />
+        </svg>
+        
+        <script>
+            function circle(x,y){
+                console.log(x,y);
+                cx=x+(150/2);
+                cy=y+(150/2);
+                let snippet = `
+                <svg height="600" width="600">
+                    <circle cx="${cx}" cy="${cy}" r="75" stroke="black" stroke-width="3" fill="red" />
+                </svg>
+                `
+                document.getElementById("rect").innerHTML+= snippet;
+            }
+        </script>
+    </body>
+</html>

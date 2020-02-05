@@ -10,7 +10,7 @@
             <line x1="400" y1="0" x2="400" y2="600" style="stroke: black; stroke-width:4;"></line>
             <line x1="0" y1="200" x2="600" y2="200" style="stroke: black; stroke-width:4;"></line>
             <line x1="0" y1="400" x2="600" y2="400" style="stroke: black; stroke-width:4;"></line>
-            <rect x="25" y="25" width="150" height="150" style="fill:aqua;stroke:darkblue;stroke-width:5;fill-opacity:0.1;stroke-opacity:0.9"/>
+            <rect id="rect1" x="25" y="25" width="150" height="150" style="fill:aqua;stroke:darkblue;stroke-width:5;fill-opacity:0.1;stroke-opacity:0.9" onclick="draw(25,25)"/>
             <rect x="225" y="25" width="150" height="150" style="fill:aqua;stroke:darkblue;stroke-width:5;fill-opacity:0.1;stroke-opacity:0.9" />
             <rect x="425" y="25" width="150" height="150" style="fill:aqua;stroke:darkblue;stroke-width:5;fill-opacity:0.1;stroke-opacity:0.9" />
             <rect x="25" y="225" width="150" height="150" style="fill:aqua;stroke:darkblue;stroke-width:5;fill-opacity:0.1;stroke-opacity:0.9" />
@@ -21,17 +21,14 @@
             <rect x="425" y="425" width="150" height="150" style="fill:aqua;stroke:darkblue;stroke-width:5;fill-opacity:0.1;stroke-opacity:0.9" />
         </svg>
         <!-- <script>
-            function draw(){
-                var canvas = document.getElementById('rect');
-                var ctx = canvas.getContext('2d'); 
-                var X = canvas.width / 2;
-                var Y = canvas.height / 2;
-                var R = 45;
-                ctx.beginPath();
-                ctx.arc(X, Y, R, 0, 2 * Math.PI, false);
-                ctx.lineWidth = 3;
-                ctx.strokeStyle = '#FF0000';
-                ctx.stroke();
+            function draw(x,y){
+                console.log(x,y);
+                cx=x+(150/2);
+                cy=y+(150/2);
+                snippet = `
+                <circle cx="${cx}" cy="${cy}" r="40" stroke="black" stroke-width="3" fill="red" />
+                `
+                document.getElementById('rect1').innerHTML+= snippet;
             }
         </script> -->
     </body>

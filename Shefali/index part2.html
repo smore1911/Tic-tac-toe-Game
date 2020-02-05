@@ -10,7 +10,7 @@
             <line x1="400" y1="0" x2="400" y2="600" style="stroke: black; stroke-width:4;"></line>
             <line x1="0" y1="200" x2="600" y2="200" style="stroke: black; stroke-width:4;"></line>
             <line x1="0" y1="400" x2="600" y2="400" style="stroke: black; stroke-width:4;"></line>
-            <rect x="25" y="25" width="150" height="150" style="fill:aqua;stroke:darkblue;stroke-width:5;fill-opacity:0.1;stroke-opacity:0.9" onclick="circle(25,25)"/>
+            <rect x="25" y="25" width="150" height="150" style="fill:aqua;stroke:darkblue;stroke-width:5;fill-opacity:0.1;stroke-opacity:0.9" onclick="circle(25,25)" />
             <rect x="225" y="25" width="150" height="150" style="fill:aqua;stroke:darkblue;stroke-width:5;fill-opacity:0.1;stroke-opacity:0.9" onclick="circle(225,25)" />
             <rect x="425" y="25" width="150" height="150" style="fill:aqua;stroke:darkblue;stroke-width:5;fill-opacity:0.1;stroke-opacity:0.9" onclick="circle(425,25)" />
             <rect x="25" y="225" width="150" height="150" style="fill:aqua;stroke:darkblue;stroke-width:5;fill-opacity:0.1;stroke-opacity:0.9" onclick="circle(25,225)" />
@@ -20,7 +20,13 @@
             <rect x="225" y="425" width="150" height="150" style="fill:aqua;stroke:darkblue;stroke-width:5;fill-opacity:0.1;stroke-opacity:0.9" onclick="circle(225,425)" />
             <rect x="425" y="425" width="150" height="150" style="fill:aqua;stroke:darkblue;stroke-width:5;fill-opacity:0.1;stroke-opacity:0.9" onclick="circle(425,425)" />
         </svg>
-        
+        <svg height="600" >
+            <path 
+                  d="M 10,150 L 70,10 L 130,150 z"
+                  fill="yellow"
+                  stroke="green" 
+                  stroke-width="6"/>
+          </svg>
         <script>
             function circle(x,y){
                 console.log(x,y);
